@@ -2,7 +2,7 @@ import { Chosen } from "./Chosen";
 import { PokemonList } from "./PokemonList";
 import { pokemon } from "./Pokemon";
 import * as Other from "./Others";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Page() {
   const [chosen, setChosen] = useState("");
