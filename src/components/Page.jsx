@@ -5,12 +5,24 @@ import * as Other from "./Others";
 import { useState } from "react";
 
 export function Page() {
+  const [chosen, setChosen] = useState("");
+  const [chosenImg, setChosenImg] = useState("");
+
   return (
     <div>
       <Chosen>
         <h1 className="text-white font-semibold text-3xl">Pilihanmu</h1>
-        <Other.Image imgUrl="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" />
-        <Other.Name name="Nama Pokemon" className="rounded" />
+        {chosenImg && <Other.Image imgUrl={chosenImg} /> ? (
+          <Other.Image imgUrl={chosenImg} />
+        ) : (
+          <Other.Image imgUrl="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" />
+        )}
+
+        {chosen && <Other.Name name={chosen} /> ? (
+          <Other.Name name={chosen} />
+        ) : (
+          <h1 className="text-white font-semibold text-xl">Nama pokemon</h1>
+        )}
       </Chosen>
       <br />
       <PokemonList>
@@ -20,7 +32,12 @@ export function Page() {
             <Other.Image
               imgUrl={pokemons.sprites.other.dream_world.front_default}
             />
-            <Other.Button />
+            <Other.Button
+              props={(e) =>
+                setChosen(pokemons.name) &
+                setChosenImg(pokemons.sprites.other.dream_world.front_default)
+              }
+            />
           </Other.Card>
         ))}
       </PokemonList>
