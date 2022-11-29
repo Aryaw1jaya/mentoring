@@ -1,6 +1,7 @@
 import "./App.css";
 import { Page } from "./components/Page";
 import { Fetch } from "./components/Fetch";
+import { Fetch2 } from "./components/Fetch2";
 
 function App() {
   return (

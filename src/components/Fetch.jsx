@@ -9,7 +9,8 @@ export function Fetch() {
       .then((data) => {
         setPokemon(data.results);
         console.log(data.results);
-      });
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (
