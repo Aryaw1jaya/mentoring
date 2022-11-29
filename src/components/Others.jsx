@@ -1,10 +1,14 @@
 function Name({ name }) {
-  return <h1 className="font-bold text-2xl mt-4">{name}</h1>;
+  return (
+    <h1 className="rounded-3xl w-fit mx-auto px-8 py-1 my-1 text-black font-semibold text-xl bg-slate-300">
+      {name}
+    </h1>
+  );
 }
 
 function Image({ imgUrl }) {
   return (
-    <img className="w-2/3 h-30 mx-auto" src={imgUrl} alt="pokemon_image" />
+    <img className="w-3/4 mx-auto h-40" src={imgUrl} alt="pokemon_image" />
   );
 }
 
@@ -12,7 +16,7 @@ function Button({ props }) {
   return (
     <button
       onClick={props}
-      className="w-100 bg-blue-500 p-3 mb-3 rounded-xl hover:bg-blue-400"
+      className="w-11/12 mx-auto my-3 p-3 font-bold text-white bg-blue-500 hover:bg-blue-400 rounded-2xl"
     >
       Choose Me
     </button>
@@ -21,7 +25,7 @@ function Button({ props }) {
 
 function Card({ children }) {
   return (
-    <div className="w-100 bg-cyan-400 text-white rounded-2xl mx-1">
+    <div className="card mx-auto bg-slate-500 w-1/4 text-center rounded-3xl hover:bg-slate-400">
       {children}
     </div>
   );

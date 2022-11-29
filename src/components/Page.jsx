@@ -5,17 +5,12 @@ import * as Other from "./Others";
 import { useState } from "react";
 
 export function Page() {
-  const [chosen, setChosen] = useState(null);
   return (
     <div>
       <Chosen>
-        <h1>Pilihanmu</h1>
-        <img
-          className="w-1/3 h-50 mx-auto"
-          src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-          alt=""
-        />
-        <h2>Bulbasaur</h2>
+        <h1 className="text-white font-semibold text-3xl">Pilihanmu</h1>
+        <Other.Image imgUrl="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" />
+        <Other.Name name="Nama Pokemon" className="rounded" />
       </Chosen>
       <br />
       <PokemonList>
