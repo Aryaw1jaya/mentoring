@@ -15,7 +15,7 @@ export function Page() {
         {chosenImg && <Other.Image imgUrl={chosenImg} /> ? (
           <Other.Image imgUrl={chosenImg} />
         ) : (
-          <Other.Image imgUrl="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" />
+          <Other.Image imgUrl="https://i.imgur.com/7CbqVxV.png" />
         )}
 
         {chosen && <Other.Name name={chosen} /> ? (
